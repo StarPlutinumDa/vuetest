@@ -1,5 +1,5 @@
 <template>
-    <div></div>
+    <div class="wuhu"></div>
 </template>
 
 <script>
