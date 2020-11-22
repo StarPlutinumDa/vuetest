@@ -1,10 +1,9 @@
 <template>
   <div id="app">
     <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link> |
+      <router-link to="/">echart</router-link> |
+      <router-link to="/normalline">折线图</router-link> |
       <router-link to="/ping">Ping</router-link>  |
-      <router-link to="/echartest">echart</router-link>
     </div>
     <router-view/>
   </div>
