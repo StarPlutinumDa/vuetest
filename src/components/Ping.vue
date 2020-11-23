@@ -1,6 +1,16 @@
 <template>
     <div class="container">
-        <button type="button" class="btn btn-primary" @click="deal">{{ msg }}</button>
+        <div class="side">
+            <div>
+                <ul>
+                    <li class="fileName" v-for="{path} in msg"
+                        @click="dealclick(path)"
+                        :key="path">
+                        {{path}}
+                    </li>
+                </ul>
+            </div>
+        </div>
     </div>
 </template>
 
@@ -11,16 +21,13 @@
         name: 'Ping',
         data() {
             return {
-                msg: 'Hello World!',
+                msg:[]
             };
         },
         methods: {
-            deal() {
-                const path = 'http://127.0.0.1:5000/testpost';
-                axios.post(path,{
-                    name:'张三',
-                    age:18
-                })
+            getMessage() {
+                const path = 'http://127.0.0.1:5000/getfilelist';
+                axios.get(path)
                     .then((res) => {
                         this.msg = res.data;
                     })
@@ -29,9 +36,31 @@
                         console.error(error);
                     });
             },
+            dealclick(path){
+                console.log(path)
+            }
         },
-        // created() {
-        //     this.getMessage();
-        // },
+        created() {
+            this.getMessage();
+        },
     };
 </script>
+<style scoped>
+
+    .fileName {
+        display: block;
+        color: #5a5a5a;
+        padding: 2px 0;
+        cursor: pointer;
+    }
+
+    .fileName:hover {
+        color: violet;
+    }
+
+    .side {
+        overflow: hidden;
+    }
+
+
+</style>
