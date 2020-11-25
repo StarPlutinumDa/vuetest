@@ -30,9 +30,9 @@
         components: {echartest, normalline},
         data() {
             return {
-                msg:"sh600297.csv",
-                thispath:"sh600297.csv",
-                flag:true
+                msg: "sh600297.csv",
+                thispath: "sh600297.csv",
+                flag: true
             };
         },
         methods: {
@@ -47,14 +47,14 @@
                         console.error(error);
                     });
             },
-            dealclick(path){
-                this.flag=false
+            dealclick(path) {
+                this.flag = false
                 this.thispath = path
-                setTimeout(()=>{
-                    this.flag=true
+                setTimeout(() => {
+                    this.flag = true
                     // this.$refs['linechart'].initChart()
                     // this.$refs['klinechart'].initChart()
-                },3)
+                }, 3)
             }
         },
         created() {
@@ -66,18 +66,22 @@
     .container {
         display: flex;
     }
+
     .side {
         flex: 2;
         overflow: scroll;
         height: 600px;
     }
+
     .chart {
         display: block;
         flex: 6;
     }
+
     .file-list {
         margin: auto;
     }
+
     ul {
         padding: 0;
     }
@@ -96,12 +100,13 @@
 
     .side::-webkit-scrollbar {
         /*滚动条整体样式*/
-        width : 6px;  /*高宽分别对应横竖滚动条的尺寸*/
+        width: 6px; /*高宽分别对应横竖滚动条的尺寸*/
         height: 0;
     }
+
     .side::-webkit-scrollbar-thumb {
         /*滚动条里面小方块*/
-        border-radius   : 10px;
+        border-radius: 10px;
         background-color: skyblue;
         background-image: -webkit-linear-gradient(
                 45deg,
@@ -114,13 +119,11 @@
                 transparent
         );
     }
+
     .side::-webkit-scrollbar-track {
         /*滚动条里面轨道*/
-        box-shadow   : inset 0 0 5px rgba(0, 0, 0, 0.2);
-        background   : #ededed;
+        box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+        background: #ededed;
         border-radius: 10px;
     }
-
-
-
 </style>

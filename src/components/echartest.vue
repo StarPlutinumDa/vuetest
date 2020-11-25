@@ -49,14 +49,6 @@
                     tooltip: {
                         trigger: 'axis'
                     },
-
-                    //工具框，可以选择
-                    // toolbox: {
-                    //     feature: {
-                    //         saveAsImage: {} //下载工具
-                    //     }
-                    // },
-
                     xAxis: {
                         name: '日期',
                         type: 'category',

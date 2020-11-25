@@ -157,6 +157,21 @@
                                         // type:'dotted'  //'dotted'虚线 'solid'实线
                                     }
                                 }
+                            },
+                            markPoint: {
+                                symbol: 'pin',
+                                symbolSize: 15,
+                                data: [
+                                    {
+                                        name: '最大值',
+                                        type: 'max'
+                                    },
+                                    {
+                                        name: '最小值',
+                                        type: 'min'
+                                    },
+
+                                ]
                             }
                         },
 
